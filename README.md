@@ -1,4 +1,4 @@
-# seminario-de-arquitetura - Arquitetura de Software do ChatGPT
+# Arquitetura de Software do ChatGPT
 
 ## Introdução
 
@@ -22,15 +22,35 @@ O modelo arquitetural do ChatGPT envolve vários componentes interligados para o
 
 ### Front-End
 
-- **Web**: Utiliza tecnologias como React.js para criar interfaces de usuário dinâmicas e responsivas.
-- **Mobile**: Aplicações nativas desenvolvidas em Swift para iOS e Kotlin para Android, proporcionando uma experiência otimizada para dispositivos móveis.
-- **Desktop**: Utiliza Electron para criar aplicações desktop que sejam consistentes com as versões web e mobile.
+#### Web
+
+O front-end web do ChatGPT é construído utilizando React.js, uma biblioteca JavaScript que permite a criação de interfaces de usuário dinâmicas e responsivas. A interface web é responsável por capturar as entradas dos usuários e exibir as respostas geradas pelo modelo. Componentes de UI são reutilizáveis e gerenciados de forma eficiente para proporcionar uma experiência suave.
+
+#### Mobile
+
+As aplicações móveis do ChatGPT são desenvolvidas nativamente para proporcionar um desempenho otimizado em dispositivos iOS e Android. Para iOS, utiliza-se Swift, enquanto Kotlin é usado para Android. Estas aplicações móveis são projetadas para serem rápidas, intuitivas e integradas aos sistemas operacionais móveis, utilizando APIs nativas para funcionalidades como notificações push e armazenamento local.
+
+#### Desktop
+
+A versão desktop do ChatGPT é construída utilizando Electron, uma estrutura que permite o desenvolvimento de aplicações de desktop utilizando tecnologias web como HTML, CSS e JavaScript. O Electron facilita a criação de aplicações que são consistentes com as versões web e mobile, permitindo uma experiência de usuário unificada em todas as plataformas.
 
 ### Back-End
 
-- **Serviços**: Implementados utilizando Node.js e Python, responsáveis pelo processamento das requisições e pela comunicação com o modelo GPT.
-- **APIs**: RESTful APIs que facilitam a comunicação entre o front-end e o back-end.
-- **Bancos de Dados**: MongoDB para armazenamento de dados não estruturados e Redis para caching.
+#### Estrutura de Microserviços
+
+O back-end do ChatGPT é baseado em uma arquitetura de microserviços, onde diferentes funcionalidades do sistema são divididas em serviços independentes. Cada microserviço é responsável por uma parte específica da funcionalidade, como autenticação de usuário, processamento de linguagem natural, gerenciamento de sessões, etc. Esta abordagem permite uma escalabilidade e manutenção mais fáceis.
+
+#### Serverless Functions
+
+Alguns componentes do back-end utilizam funções serverless para tarefas específicas que não requerem um servidor dedicado em tempo integral. Serviços como AWS Lambda são usados para executar funções em resposta a eventos, como uma nova mensagem do usuário, permitindo uma alocação eficiente de recursos.
+
+#### Comunicação entre Microserviços
+
+Os microserviços se comunicam entre si utilizando APIs RESTful e mensageria através de filas, como Apache Kafka, que garante a entrega de mensagens de forma assíncrona e resiliente. Esta comunicação é fundamental para manter a integridade e a coerência dos dados em todo o sistema.
+
+#### Hospedagem e Infraestrutura
+
+Os microserviços do ChatGPT estão hospedados em plataformas de cloud computing como AWS e Google Cloud, que oferecem escalabilidade elástica e gerenciamento de recursos. A infraestrutura de cloud permite que o sistema se ajuste automaticamente à carga de trabalho, garantindo alta disponibilidade e desempenho.
 
 ### Streaming e Processamento de Dados
 
@@ -108,4 +128,3 @@ A arquitetura de software do ChatGPT é um exemplo de integração eficiente de 
 3. Brown, T., Mann, B., Ryder, N., et al. (2020). Language Models are Few-Shot Learners. [Link](https://arxiv.org/abs/2005.14165)
 4. Hugging Face. Transformers Documentation. [Link](https://huggingface.co/transformers/)
 5. OpenAI. GPT-3 Technical Overview. [Link](https://beta.openai.com/docs/)
-   
