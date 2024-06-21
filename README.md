@@ -60,28 +60,28 @@ Os microserviços do ChatGPT estão hospedados em plataformas de cloud computing
 ### CI/CD e DevOps
 
 - **Integração Contínua/Entrega Contínua (CI/CD)**: Utiliza ferramentas como Jenkins e GitHub Actions para automação de testes e deploys.
-- **Monitoramento e Logging**: Ferramentas como Prometheus e Grafana para monitoramento da performance e logging.
+- **Monitoramento e Logging**: Ferramentas como Datadog e Grafana para monitoramento da performance e logging.
 
 ## Parte 3: Tecnologias Utilizadas
 
 ### Linguagens e Frameworks
 
-- **JavaScript/TypeScript**: Utilizados no desenvolvimento front-end (React.js).
-- **Python**: Principal linguagem para desenvolvimento back-end e machine learning.
+- **JavaScript/TypeScript**: Utilizados no desenvolvimento front-end (React.js, Next.js).
+- **Python**: Principal linguagem para desenvolvimento machine learning.
 - **Node.js**: Utilizado para desenvolvimento de servidores e APIs.
 - **Swift/Kotlin**: Para desenvolvimento de aplicações móveis nativas.
 
 ### Infraestrutura
 
-- **Cloud Computing**: AWS, Google Cloud ou Azure para hospedar a aplicação e escalar conforme necessário.
+- **Cloud Computing**: AWS para hospedar a aplicação e escalar conforme necessário.
 - **Serviços de Machine Learning**: Utilização de GPUs e TPUs para acelerar o treinamento e a inferência do modelo GPT.
-- **Banco de Dados**: MongoDB, Redis e PostgreSQL.
+- **Banco de Dados**: MongoDB e Redis.
 
 ### Ferramentas de Desenvolvimento
 
 - **Versionamento de Código**: Git e GitHub para controle de versão e colaboração.
 - **CI/CD**: Jenkins, GitHub Actions, e outros para automação de deploys.
-- **Monitoramento**: Prometheus, Grafana, e ELK Stack (Elasticsearch, Logstash, Kibana).
+- **Monitoramento**: Datadog, Grafana, e ELK Stack (Elasticsearch, Logstash, Kibana).
 
 ## Parte 4: Integração dos Componentes
 
